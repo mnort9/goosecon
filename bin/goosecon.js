@@ -77,9 +77,9 @@ function startReplServer () {
     });
 }
 
-function addModulesToContext() {
+function loadModules() {
     var moduleNames = [];
-    var files = _.compact(_.flatten([findModelFiles(), findOtherModules()]));
+    var files = _.compact(_.flatten([findModels(), findModules()]));
         
     // Add models to repl context
     files.forEach(function(file) {  
@@ -101,7 +101,7 @@ function addModulesToContext() {
     }
 }
 
-function findModelFiles() {
+function findModels() {
     var modelsPath = config.modelsPath;
     var files;
         
@@ -121,7 +121,7 @@ function findModelFiles() {
     return files;
 }
 
-function findOtherModules() { 
+function findModules() { 
     if (!config.modules) return;
     
     // Convert command line argument to array
@@ -136,4 +136,4 @@ function findOtherModules() {
 }
 
 startReplServer();
-addModulesToContext();
+loadModules();
