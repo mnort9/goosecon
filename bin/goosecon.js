@@ -10,10 +10,7 @@ var _ = require('underscore');
 var chalk = require('chalk');
 
 var argv = require('yargs')
-    .usage('Usage: $0 <command> [options]')
-    .command('goosecon', 'Run goosecon')
-    .alias('console')
-    .demand(1)
+    .usage('Usage: $0 [options]')
     .option('mongo-db', {
         describe: 'MongoDB URL'
     })

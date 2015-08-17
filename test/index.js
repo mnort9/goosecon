@@ -8,7 +8,7 @@ describe('goosecon', function() {
     var filePath = path.resolve(__dirname + '/../bin/goosecon.js');
 
     before(function() {
-        replServer = spawn('node', [filePath, 'console', '--mongo-db', 'mongodb://localhost/test', '--models-path', './test/models', '--modules', './test/modules']);        
+        replServer = spawn('node', [filePath, '--mongo-db', 'mongodb://localhost/test', '--models-path', './test/models', '--modules', './test/modules']);        
     
         var result = '';
         var err = '';
@@ -28,7 +28,7 @@ describe('goosecon', function() {
     });
     
     it('Throws error if unable to connect to db', function(done) {
-        var cp = spawn('node', [filePath, 'console',  '--mongo-db', ' ']);
+        var cp = spawn('node', [filePath,  '--mongo-db', ' ']);
         
         var err = '';
         cp.stderr.on('data', function(data) { err += data; });

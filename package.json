@@ -1,7 +1,7 @@
 {
   "name": "goosecon",
   "version": "0.1.0",
-  "description": "A Mongoose console that auto-loads models and other modules",
+  "description": "Mongoose Console that auto-loads models and other app modules",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,9 +18,10 @@
     "mocha": "^2.2.5"
   },
   "bin": {
-    "console": "./bin/goosecon.js"
+    "goosecon": "bin/goosecon.js"
   },
   "engines": {
     "node": ">=0.10.x"
-  }
+  },
+  "preferGlobal": true
 }
