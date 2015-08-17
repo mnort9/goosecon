@@ -95,9 +95,10 @@ function addModulesToContext() {
         moduleNames.push(moduleName);
     });
     
-    if (moduleNames)
+    if (moduleNames) {
         console.log(chalk.grey('** Loaded: ') + chalk.red(moduleNames.join(', ')));
         replServer.displayPrompt();
+    }
 }
 
 function findModelFiles() {
