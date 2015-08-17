@@ -2,6 +2,8 @@
 
 goosecon is a Mongoose REPL Console that auto-loads mongoose models and additional app-specific modules (services/helpers).
 
+![](https://github.com/mnort9/goosecon/blob/master/screenshot.png)
+
 ### Installation
 
 Install globally:
