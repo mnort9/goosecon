@@ -8,7 +8,7 @@ describe('goosecon', function() {
     var filePath = path.resolve(__dirname + '/../bin/goosecon.js');
 
     before(function() {
-        replServer = spawn('node', [filePath, '--mongo-db', 'mongodb://localhost/test', '--models-path', './test/models', '--modules', './test/modules']);        
+        replServer = spawn('node', [filePath, '--mongo-db', 'mongodb://localhost/test', '--models-dir', './test/models', '--modules', './test/modules']);        
     
         var result = '';
         var err = '';

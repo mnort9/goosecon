@@ -14,10 +14,10 @@ var argv = require('yargs')
     .option('mongo-db', {
         describe: 'MongoDB URL'
     })
-    .option('models-path', {
+    .option('models-dir', {
         describe: 'Path to models directory'
     })
-    .option('mongoose-path', {
+    .option('mongoose-dir', {
         describe: 'Path to mongoose'
     })
     .help('h')
@@ -27,7 +27,7 @@ var argv = require('yargs')
 // Override options
 var config = rc('goosecon', {}, argv);
     
-var mongoosePath = config.mongoosePath ? path.resolve(process.cwd() + config.mongoosePath) : 'mongoose';
+var mongoosePath = config.mongooseDir ? path.resolve(process.cwd() + config.mongooseDir) : 'mongoose';
 var mongoose = require(mongoosePath);
 var replServer;
 
@@ -99,7 +99,7 @@ function loadModules() {
 }
 
 function findModels() {
-    var modelsPath = config.modelsPath;
+    var modelsPath = config.modelsDir;
     var files;
         
     if (!modelsPath) {
