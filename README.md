@@ -34,7 +34,7 @@ The only required option is the MongoDB url:
 $ goosecon --mongo-db 'mongodb://localhost/db-name'
 ```
 
-By default, goosecon will search through working directory for a `models` directory and attempt to load any mongoose models.
+By default, goosecon will search through the working directory for a `models` directory and attempt to load any mongoose models.
 
 You can also specify a `models` directory:
 
