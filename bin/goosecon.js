@@ -27,7 +27,7 @@ var argv = require('yargs')
 // Override options
 var config = rc('goosecon', {}, argv);
     
-var mongoosePath = config.mongooseDir ? path.resolve(process.cwd() + config.mongooseDir) : 'mongoose';
+var mongoosePath = config.mongooseDir ? path.normalize(path.resolve(process.cwd(), config.mongooseDir)) : 'mongoose';
 var mongoose = require(mongoosePath);
 var replServer;
 
