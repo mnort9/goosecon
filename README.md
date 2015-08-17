@@ -49,8 +49,8 @@ As an alernative to the command line options, you can create a `.gooseconrc` con
 ```json
 {
     "mongoDb": "mongodb://localhost/db-name",
-    "models": "./path/to/models",
-    "mongoose": "./node_modules/mongoose",
+    "modelsDir": "./path/to/models",
+    "mongooseDir": "./node_modules/mongoose",
     "modules": [
         "./path/to/services",
         "./path/to/helpers"
