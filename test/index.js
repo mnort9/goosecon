@@ -3,9 +3,9 @@ var expect = require('chai').expect;
 var path = require('path');
 var chalk = require('chalk');
 
-describe('mongoose-console', function() {
+describe('goosecon', function() {
     var replServer;
-    var filePath = path.resolve(__dirname + "/../bin/console.js");
+    var filePath = path.resolve(__dirname + '/../bin/goosecon.js');
 
     before(function() {
         replServer = spawn('node', [filePath, 'console', '--mongo-db', 'mongodb://localhost/test', '--models-path', './test/models', '--modules', './test/modules']);        
