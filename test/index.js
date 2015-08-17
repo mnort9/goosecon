@@ -27,8 +27,8 @@ describe('goosecon', function() {
         replServer.kill();
     });
     
-    it('Throws error if not connected to db', function(done) {
-        var cp = spawn('node', [filePath, 'console']);
+    it('Throws error if unable to connect to db', function(done) {
+        var cp = spawn('node', [filePath, 'console',  '--mongo-db', ' ']);
         
         var err = '';
         cp.stderr.on('data', function(data) { err += data; });
