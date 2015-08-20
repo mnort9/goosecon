@@ -1,6 +1,6 @@
 # goosecon
 
-goosecon is a Mongoose REPL Console that auto-loads mongoose models and additional app-specific modules (services/helpers).
+goosecon is a Mongoose REPL Console that auto-loads mongoose models and additional app-specific modules (services/helpers). Inspired by rails console.
 
 ![](https://github.com/mnort9/goosecon/blob/master/screenshot.png)
 
@@ -23,7 +23,7 @@ $ goosecon
 Perform a mongoose query with any of your models
 
 ```sh
-$ Person.findOne({name: 'Matt'}).populate('pets')
+> Person.findOne({name: 'Matt'}).populate('pets')
 ```
 
 ### Options
