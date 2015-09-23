@@ -64,6 +64,7 @@ function startReplServer () {
             try { 
                 val = JSON.parse(JSON.stringify(val));
                 console.log(util.inspect(val, { colors: true }));
+                console.log(util.inspect(val, { colors: true, depth: 7 }));
                 return ''; 
             }
             catch(err) { console.error('Unable to stringify JSON'); }
