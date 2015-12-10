@@ -94,7 +94,8 @@ function loadModules() {
     });
     
     if (moduleNames) {
-        console.log(chalk.grey('** Loaded: ') + chalk.red(moduleNames.join(', ')));
+        console.log(chalk.underline('\n' + moduleNames.length + ' Modules Loaded:'));
+        console.log(chalk.red(moduleNames.join(', ')) + '\n');
         replServer.displayPrompt();
     }
 }
@@ -133,5 +134,19 @@ function findModules() {
     return modules;
 }
 
+function displayIntroText() {
+    var logo = '\n' + 
+    '██████╗  ██████╗  ██████╗ ███████╗███████╗ ██████╗ ██████╗ ███╗   ██╗\n'  +
+    '██╔════╝ ██╔═══██╗██╔═══██╗██╔════╝██╔════╝██╔════╝██╔═══██╗████╗  ██║\n' +
+    '██║  ███╗██║   ██║██║   ██║███████╗█████╗  ██║     ██║   ██║██╔██╗ ██║\n' +
+    '██║   ██║██║   ██║██║   ██║╚════██║██╔══╝  ██║     ██║   ██║██║╚██╗██║\n' +
+    '╚██████╔╝╚██████╔╝╚██████╔╝███████║███████╗╚██████╗╚██████╔╝██║ ╚████║\n' +
+    '╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝\n';
+    console.log(chalk.red(logo));
+    console.log('Loading Modules...');
+}
+ 
+
+displayIntroText();
 startReplServer();
 loadModules();
