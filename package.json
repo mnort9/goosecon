@@ -1,6 +1,6 @@
 {
   "name": "goosecon",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Mongoose Console that auto-loads models and other app modules",
   "scripts": {
     "test": "mocha"
